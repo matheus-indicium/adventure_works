@@ -1,0 +1,41 @@
+models:
+  - name: int_vendas__prep_ordens
+    description: Modelo que enriquece os dados de pedidos adicionado a menor granularidade e o motivo da venda
+    columns:
+      - name: PK_ORDEM_VENDA_ITEM
+        description: Identificador único do pedido item
+        tests:
+          - not_null
+          - unique
+      - name: FK_ORDEM_VENDA_PEDIDO
+        description: Identificador do pedido
+        tests:
+          - not_null
+      - name: FK_PRODUTO
+        description: Identificador do produto
+        tests:
+          - not_null
+      - name: FK_CLIENTE
+        description: Identificador do cliente
+        tests:
+          - not_null
+      - name: FK_ENDERECO_ENTREGA
+        description: Identificador do endereço de entrega
+        tests:
+          - not_null
+      - name: FK_ENDERECO_FATURAMENTO
+        description: Identificador do endereço de faturamento
+        tests:
+          - not_null
+      - name: FK_CARTAO_CREDITO
+        description: Identificador do tipo de cartão de crédito
+      - name: FK_TIPO_VENDA
+        description: Identificador do tipo de venda realizada
+      - name: QTD_COMPRADA
+        description: Quantidade de itens comprados
+      - name: PRECO_UNITARIO
+        description: Preço unitário por item
+      - name: DATA_VENDA_PEDIDO
+        description: Data de venda do pedido
+      - name: STATUS
+        description: Status do pedido
