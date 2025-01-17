@@ -17,6 +17,8 @@ sources:
             description: Nome da cidade
           - name: postalcode
             description: Número do código postal
+          - name: stateprovinceid
+            description: Identificador do Estado
       
       - name: salesorderdetail
         description: Tabela de ordens de vendas detalhadas por item
