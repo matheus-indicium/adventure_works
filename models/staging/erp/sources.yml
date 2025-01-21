@@ -6,130 +6,178 @@ sources:
 
     tables:
       - name: address
-        description: Tabela de endereço
+        description: Tabela de endereços
+
         columns:
           - name: addressid
             description: Indentificador único do endereço
             tests:
               - not_null
               - unique
+
           - name: city
             description: Nome da cidade
+
           - name: postalcode
             description: Número do código postal
+
           - name: stateprovinceid
-            description: Identificador do Estado
+            description: Identificador único do Estado
       
       - name: salesorderdetail
         description: Tabela de ordens de vendas detalhadas por item
+
         columns:
           - name: salesorderdetailid
             description: Identificador único da ordem de venda do item
             tests:
               - not_null
               - unique
+
           - name: salesorderid
-            description: Identificador da ordem de venda do pedido
+            description: Identificador único da ordem de venda do pedido
+
           - name: productid
-            description: Identificador do produto
+            description: Identificador único do produto
+
           - name: orderqty
             description: Quantidade vendida do item
+
           - name: unitprice
             description: Preço unitário do item
+
           - name: unitpricediscount
-            description: Valor do desconto por item
+            description: Valor do desconto do item
 
       - name: salesorderheader
         description: Tabela de ordens de vendas por pedido
+
         columns:
           - name: salesorderid
             description: Identificador único da ordem de venda do pedido
             tests:
               - not_null
               - unique
+
           - name: creditcardid
-            description: Identificador do tipo de cartão de crédito
+            description: Identificador único do tipo de cartão de crédito
+
           - name: customerid
-            description: Identificador do cliente
+            description: Identificador único do cliente
+
           - name: shiptoaddressid
             description: Identificador do endereço de entrega
+
           - name: billtoaddressid
             description: Identificador do endereço de faturamento
+
           - name: orderdate
             description: Data de venda do pedido
+
           - name: status
             description: Status do pedido
 
       - name: salesorderheadersalesreason
         description: Tabela identificando o motivo de venda de cada pedido
+
         columns:
           - name: salesreasonid
             description: Identificador único do tipo de venda
             tests:
               - not_null
+
           - name: salesorderid
             description: Identificador da ordem de venda do pedido
 
       - name: salesreason
         description: Tabela com a descrição do tipo de venda
+
         columns:
           - name: salesreasonid
             description: Identificador único do motivo de venda
+
           - name: name
             description: Descrição do motivo de venda
+
           - name: reasontype
             description: Tipo do motivo de venda
 
       - name: product
         description: Tabela de produtos
+
         columns:
           - name: productid
             description: Identificador único do produto
             tests:
               - not_null
               - unique
+
           - name: name
             description: Nome do produto
 
       - name: creditcard
-        description: Tabela de cartão de crédito
+        description: Tabela identificando os tipos de cartão de crédito
+
         columns:
           - name: creditcardid
             description: Identificador único do tipo de cartão de crédito
             tests:
               - not_null
               - unique
+
           - name: cardtype
             description: Descrição do tipo de cartão de crédito
 
       - name: customer
-        description: Tabela de clientes
+        description: Tabela contendo os dados de clientes
+
         columns:
           - name: customerid
             description: Identificador único do cliente
             tests:
               - not_null
               - unique
-          - name: storeid
-            description: Identificador da loja
+
           - name: personid
             description: Identificador pessoal
-          - name: territoryid
-            description: Código identificador do território
 
       - name: stateprovince
-        description: Tabela de Estado e País
+        description: Tabela contendo informações de Estado e País
+
         columns:
           - name: stateprovinceid
             description: Identificador único do Estado
             tests:
               - not_null
               - unique
+
           - name: name
             description: Nome do Estado
+
           - name: stateprovincecode
             description: Código do Estado
+
           - name: countryregioncode
-            description: Código do País            
+            description: Código do País 
+
           - name: territoryid
             description: Código identificador do território
+
+      - name: person
+        description: Armazena informações com detalhes sobre as pessoas
+
+        columns:
+          - name: businessentityid
+            description: Identificador úncio da pessoa
+            tests:
+              - not_null
+              - unique
+              
+          - name: firstname
+            description: Primeiro nome da pessoa
+
+          - name: middlename
+            description: Nome do meio da pessoa
+
+          - name: lastname
+            description: Último nome da pessoa
