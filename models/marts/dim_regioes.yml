@@ -1,0 +1,29 @@
+models:
+
+  - name: dim_regioes
+    description: Tabela de dimensão das regiões
+
+    columns:
+      - name: pk_endereco
+        description: Identificador único do endereço
+
+      - name: cidade
+        description: Nome da Cidade
+
+      - name: codigo_postal
+        description: Número do código postal
+
+      - name: pk_estado
+        description: identificador único do estado
+
+      - name: nome_estado
+        description: Nome do Estado
+      
+      - name: codigo_estado
+        description: Código de identificação do Estado
+      
+      - name: codigo_pais
+        description: Código de identificação do País
+
+      - name: territorio
+        description: Identificador do território

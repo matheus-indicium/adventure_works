@@ -1,0 +1,14 @@
+models:
+
+  - name: dim_clientes
+    description: Tabela de dimensão identificando os clientes
+
+    columns:
+      - name: pk_cliente
+        description: Identificador único do cliente
+
+      - name: sk_pessoa
+        description: Identificador único da pessoa
+      
+      - name: nome_completo
+        description: Nome completo do cliente
