@@ -181,3 +181,15 @@ sources:
 
           - name: lastname
             description: Último nome da pessoa
+      - name: countryregion
+        description: Tabela contendo informações do País
+
+        columns:
+          - name: countryregioncode
+            description: Código do País
+            tests:
+              - not_null
+              - unique
+              
+          - name: name
+            description: Nome do País

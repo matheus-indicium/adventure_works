@@ -26,6 +26,9 @@ models:
 
       - name: CODIGO_PAIS
         description: Código do País
+      
+      - name: NOME_PAIS
+        description: Nome do País
 
       - name: TERRITORIO
         description: Código de identificação do território
