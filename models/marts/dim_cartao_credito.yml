@@ -1,0 +1,11 @@
+models:
+
+  - name: dim_cartao_credito
+    description: Tabela de dimensão identificando os tipos de cartão de crédito
+
+    columns:
+      - name: pk_cartao_credito
+        description: Identificador único do tipo de cartão de crédito
+        
+      - name: tipo_cartao
+        description: Descrição do tipo de cartão de crédito

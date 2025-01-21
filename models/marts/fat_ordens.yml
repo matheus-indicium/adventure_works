@@ -1,0 +1,47 @@
+models:
+
+  - name: fat_ordens
+    description: Tabela fato contendo as informações das ordens de venda da empresa Adventure Works
+
+    columns:
+      - name: pk_ordem_venda_item
+        description: Identificador único do pedido item
+
+      - name: fk_ordem_venda_pedido
+        description: Identificador único do pedido
+
+      - name: fk_cartao_credito
+        description: Identificador único do tipo de cartão de crédito
+
+      - name: fk_cliente
+        description: Identificador único do cliente
+
+      - name: fk_endereco_entrega
+        description: Identificador único do endereço de entrega
+      
+      - name: fk_endereco_faturamento
+        description: Identificador único do endereço de faturamento
+      
+      - name: fk_tipo_venda
+        description: Identificador único do tipo de venda
+
+      - name: qtd_comprada
+        description: Quantidade comprada por item
+
+      - name: preco_unitario
+        description: Preço unitário por item
+      
+      - name: desconto_unitario
+        description: Desconto unitário do item
+      
+      - name: valor_venda_bruta
+        description: Cálculo do valor da venda bruta
+      
+      - name: valor_venda_liquida
+        description: Cálculo do valor da venda líquida
+      
+      - name: data_venda_pedido
+        description: Data de venda do pedido
+      
+      - name: status
+        description: Status do pedido

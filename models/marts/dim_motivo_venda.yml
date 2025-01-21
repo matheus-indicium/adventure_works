@@ -1,0 +1,14 @@
+models:
+
+  - name: dim_motivo_venda
+    description: Tabela de dimensão dos motivos de venda
+
+    columns:
+      - name: pk_motivo_venda
+        description: Identificador único do motivo de venda
+
+      - name: descricao_motivo_venda
+        description: Descrição do motivo da venda
+      
+      - name: tipo_motivo_venda
+        description: Tipo do motivo da venda

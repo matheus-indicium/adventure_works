@@ -1,0 +1,11 @@
+models:
+
+  - name: dim_produtos
+    description: Tabela de dimensão dos produtos
+
+    columns:
+      - name: pk_produto
+        description: Identificador único do produto
+
+      - name: nome_produto
+        description: Nome do produto
