@@ -1,0 +1,16 @@
+models:
+  - name: int_vendas__prep_clientes
+    description: Modelo que enriquece os dados de clientes
+
+    columns:
+      - name: pk_cliente
+        description: Identificador único do cliente
+        tests:
+          - not_null
+          - unique
+
+      - name: sk_pessoa
+        description: Identificador único da pessoa
+
+      - name: nome_completo
+        description: Nome completo do cliente

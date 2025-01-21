@@ -2,9 +2,9 @@ with
     enriquecendo_base_regioes as (
         select
             cidade.pk_endereco
+            ,estado_pais.pk_estado
             ,cidade.cidade
             ,cidade.codigo_postal
-            ,estado_pais.pk_estado
             ,estado_pais.nome_estado
             ,estado_pais.codigo_estado
             ,estado_pais.codigo_pais

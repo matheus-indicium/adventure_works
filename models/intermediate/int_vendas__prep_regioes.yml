@@ -1,23 +1,31 @@
 models:
   - name: int_vendas_prep_regioes
-    description: Modelo que enriquece os dados de regiões agrupando na mesma tabela a Cidade, Estado e País. 
+    description: Modelo que enriquece os dados de regiões agrupando na mesma tabela a Cidade, Estado e País.
+
     columns:
       - name: PK_ENDERECO
         description: Identificador único do endereço
         tests:
           - not_null
           - unique
-      - name: CIDADE
-        description: Nome da cidade
-      - name: CODIGO_POSTAL
-        description: Número do código postal
+
       - name: PK_ESTADO
         description: Identificador do Estado
+        
+      - name: CIDADE
+        description: Nome da cidade
+
+      - name: CODIGO_POSTAL
+        description: Número do código postal
+
       - name: NOME_ESTADO
         description: Nome do Estado
+
       - name: CODIGO_ESTADO
         description: Código do Estado
+
       - name: CODIGO_PAIS
         description: Código do País
+
       - name: TERRITORIO
         description: Código de identificação do território
