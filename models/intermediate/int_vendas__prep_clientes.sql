@@ -8,7 +8,7 @@ with
     juntando_bases as (
         select
             clientes.pk_cliente
-            ,clientes.sk_pessoa
+            ,clientes.fk_pessoa
             ,COALESCE(pessoas.primeiro_nome, '') || ' ' || 
             COALESCE(pessoas.nome_do_meio, '') || ' ' || 
             COALESCE(pessoas.ultimo_nome, '') as nome_completo
@@ -17,7 +17,7 @@ with
         left join
             pessoas
         on
-            clientes.sk_pessoa = pessoas.pk_pessoa
+            clientes.fk_pessoa = pessoas.pk_pessoa
     )
 
 
