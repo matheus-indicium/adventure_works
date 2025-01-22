@@ -7,7 +7,7 @@ models:
       - name: pk_cliente
         description: Identificador único do cliente
 
-      - name: sk_pessoa
+      - name: fk_pessoa
         description: Identificador único da pessoa
       
       - name: nome_completo

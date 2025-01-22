@@ -9,7 +9,7 @@ models:
           - not_null
           - unique
 
-      - name: sk_pessoa
+      - name: fk_pessoa
         description: Identificador único da pessoa
 
       - name: nome_completo
